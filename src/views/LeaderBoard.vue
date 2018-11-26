@@ -1,13 +1,13 @@
 <template>
-  <leader-board></leader-board>
+  <app-leaderboard></app-leaderboard>
 </template>
 
 <script>
-import LeaderBoard from '@/components/LeaderBoard'
+import AppLeaderboard from '@/components/AppLeaderboard'
 
 export default {
   components: {
-    LeaderBoard
+    AppLeaderboard
   }
 }
 </script>

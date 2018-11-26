@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper home-wrapper">
     <h1 class="primary-text text-shadow centered-text">Welcome to its just TRIVIA</h1>
-    <h3 class="text-shadow">Input your username to start playing</h3>
+    <h3 class="text-shadow">Input your username to join us</h3>
     <input type="text" v-model="username" class="input-field  centered-text">
 
       <p v-if="usernameValid">Begin <router-link to="/" tag="span" class="forward-arrow">&#8594;</router-link></p> 
@@ -9,6 +9,9 @@
 </template>
 
 <script>
+// import axios from 'axios'
+
+
 export default {
   data(){
     return {
@@ -21,6 +24,9 @@ export default {
       return true
     }
   },
+  created(){
+    this.$store.dispatch('fetchQuestions')
+  }
 }
 </script>
 

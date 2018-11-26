@@ -1,0 +1,57 @@
+aside.leaderboard{
+    display: flex;
+    flex-direction: column;
+    /* just for */
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    width: 30%;
+    padding: 2px;
+    
+    font-weight: bold;
+    color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .leaderboard p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #FFE16B;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .leaderboard ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;  
+  }
+  .shadow {
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  }
+  .leaderboard ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5%;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-radius:5px;
+    
+  }
+  .scores-list span.name {
+    margin-right: auto;
+    font-weight: bolder;
+    font-size: 14px;
+  }
+  .scores-list span.score {
+    color:#FFE16B;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  span.score{
+    margin-right: 0;
+  }
+  .text-shadow {
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+  }
