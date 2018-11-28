@@ -1,28 +1,29 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import axios from 'axios'
-
+import Questions from './modules/questions/questions'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    questions: [],
-    currentQuestionIndex: null,
+    user: ''
+  },
+  getters:{
+    user: (state)=>{
+      return state.user
+    }
   },
   mutations: {
-    SET_QUESTIONS (state, questions){ 
-      state.questions = questions
+    SET_USER(state, name){
+      state.user = name
     }
   },
   actions: {
-    setQuestions ({ commit }, questions) {
-      commit('SET_QUESTIONS', questions)
-    },
-
-    fetchQuestions ( {commit},){
-      axios.get('/data/questions.json')
-            .then(resp => console.dir(resp))
+    setUsername({commit}, name){
+      commit('SET_USER', name)
     }
+  },
+  modules: {
+    questions: Questions
   }
 });

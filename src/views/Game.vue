@@ -1,8 +1,13 @@
 <template>
-    <div>
-        <app-header></app-header>
+    <div v-cloak>
+        <app-header 
+            :score="score"
+            :percentage="questionPercentage"
+            :user="user"
+            >
+        </app-header>
         <div class="wrap">
-            <app-question :question="dummyQuestion"></app-question>
+            <app-question :question="currentQuestion"></app-question>
         </div>
     </div>
 </template>
@@ -19,38 +24,40 @@ export default {
         AppLeaderboard,
         AppQuestion
     },
-    data(){
-        return {
-            dummyQuestion:  {
-                category: "General Knowledge",
-                type: "multiple",
-                difficulty: "medium",
-                question: "Which river flows through the Scottish city of Glasgow?",
-                correct_answer: "Clyde",
-                incorrect_answers: [
-                    "Tay",
-                    "Dee",
-                    "Tweed"
-                ]
-            },
-                        
+    computed: {
+        currentQuestion () {
+            return this.$store.getters.currentQuestion
+        },
+        score () {
+            return this.$store.getters.score
+        },
+        questionPercentage(){
+            return this.$store.getters.questionPercentage
+        },
+        user(){
+            return this.$store.state.user
         }
-    }
-
+    },
+   created(){
+    this.$store.dispatch('fetchQuestions')
+  }
 }
 </script>
 
 <style>
+[v-cloak]{
+    display: none;
+}
 .wrap {
     display: flex;
     justify-content: space-between;
 }
-aside.leaderboard{
+/* aside.leaderboard{
 
 }
 .question{
-    /* display: relative; */
-}
+    display: relative;
+} */
 .countdown{
     display: none;
     position: absolute;

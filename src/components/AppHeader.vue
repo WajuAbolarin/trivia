@@ -3,20 +3,21 @@
         <h1 class="left black text-shadow"><span class="alt-text">J</span>W</h1>
         <div class="right details black text-shadow">
             <div class="top">
-            <span class="score alt-text">0</span>
+            <span class="score alt-text">{{score}}</span>
             <span class="difficulty">Easy</span>
             </div>
             <div class="progress-border">
-                <div class="progress" style="width: 0%;"></div>
+                <div class="progress" :style="`width: ${percentage}%;`"></div>
             </div>
             <div class="bottom">
-            <span class="name">Guest</span></div>
+            <span class="name">{{user}}</span></div>
         </div>
     </header>
 </template>
 
 <script>
 export default {
+  props:['score', 'percentage', 'user'],
 
 }
 </script>

@@ -3,11 +3,12 @@
         <div class="question-wrapper">
             <h3 class="question primary-text text-shadow"> {{question.question}} </h3>
         
-        <ul class="options">
+        <ul class="options" :class="{'already-answered': alreadyAnswered}">
             <li 
               class="option black "
               v-for="(option, i) in options "
-              :key="i">
+              :key="i"
+              @click="questionAnswered(option)">
                 {{option}}
                   <span class="tick"></span>
             </li>
@@ -16,7 +17,7 @@
         </div>
             
     </main>    
-</template>
+</template>already-answered
 
 <script>
 export default {
@@ -26,16 +27,27 @@ export default {
         type: Object
         }
   },
+  data () {
+    return {
+      alreadyAnswered: false
+    }
+  },
   computed:{
     options() {
         return [...this.question.incorrect_answers, this.question.correct_answer].sort()
     },
 
   },
-  methods: {
-      combineOptions(){
-        return [...this.question.incorrect_answers, this.question.correct_answer]
-      }
+  methods:{
+    questionAnswered(option){
+      this.alreadyAnswered = true
+      this.$store.dispatch('evaluateAnswer', option)
+    }
+  },
+  watch: {
+    question(){
+      this.alreadyAnswered = false
+    }
   }
   
 };
@@ -91,5 +103,8 @@ export default {
 .countdown {
   font-size: 55px;
   font-style: italic;
+}
+ul.already-answered li {
+  pointer-events: none;
 }
 </style>

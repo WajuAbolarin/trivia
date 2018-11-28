@@ -2,30 +2,33 @@
   <div class="wrapper home-wrapper">
     <h1 class="primary-text text-shadow centered-text">Welcome to its just TRIVIA</h1>
     <h3 class="text-shadow">Input your username to join us</h3>
-    <input type="text" v-model="username" class="input-field  centered-text">
+    <input type="text" :value="$store.state.user" @change="setUsername" class="input-field centered-text alt-text">
 
-      <p v-if="usernameValid">Begin <router-link to="/" tag="span" class="forward-arrow">&#8594;</router-link></p> 
+      <p v-if="usernameValid">Begin <router-link to="/game" tag="span" class="forward-arrow">&#8594;</router-link></p> 
   </div>
 </template>
 
 <script>
-// import axios from 'axios'
 
 
 export default {
   data(){
     return {
-      username : 'Waju',
       validationMessage: null
     }
   },
   computed: {
     usernameValid(){
       return true
+    },
+    user(){
+      this.$store.getters.user
     }
   },
-  created(){
-    this.$store.dispatch('fetchQuestions')
+  methods:{
+    setUsername(e){
+      this.$store.dispatch('setUsername', e.target.value)
+    }
   }
 }
 </script>
@@ -38,6 +41,8 @@ p.begin {
 .forward-arrow{
   font-size: 1.5rem;
   vertical-align: middle;
+  cursor: pointer;
+  padding: 5px;
 }
 .home-wrapper{
   flex-direction: column;
