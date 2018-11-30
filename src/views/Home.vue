@@ -4,7 +4,7 @@
     <h3 class="text-shadow">Input your username to join us</h3>
     <input type="text" :value="$store.state.user" @change="setUsername" class="input-field centered-text alt-text">
 
-      <p v-if="usernameValid">Begin <router-link to="/game" tag="span" class="forward-arrow">&#8594;</router-link></p> 
+      <p v-if="usernameValid">Get Started <router-link to="/game" tag="span" class="forward-arrow">&#8594;</router-link></p> 
   </div>
 </template>
 

@@ -1,125 +1,605 @@
 {
   "response_code": 0,
   "results": [
-    {
-      "category": "General Knowledge",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "Which river flows through the Scottish city of Glasgow?",
-      "correct_answer": "Clyde",
-      "incorrect_answers": [
-        "Tay",
-        "Dee",
-        "Tweed"
-      ]
-    },
-    {
-      "category": "Geography",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "On a London Underground map, what colour is the Circle Line?",
-      "correct_answer": "Yellow",
-      "incorrect_answers": [
-        "Red",
-        "Blue",
-        "Green"
-      ]
-    },
-    {
-      "category": "Science: Computers",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "Moore&#039;s law originally stated that the number of transistors on a microprocessor chip would double every...",
-      "correct_answer": "Year",
-      "incorrect_answers": [
-        "Four Years",
-        "Two Years",
-        "Eight Years"
-      ]
-    },
-    {
-      "category": "Entertainment: Books",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "By what name was the author Eric Blair better known?",
-      "correct_answer": "George Orwell",
-      "incorrect_answers": [
-        "Aldous Huxley",
-        "Ernest Hemingway",
-        "Ray Bradbury"
-      ]
-    },
-    {
-      "category": "History",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "The creator of the Enigma Cypher and Machine was of what nationality?",
-      "correct_answer": "German",
-      "incorrect_answers": [
-        "American",
-        "British",
-        "Polish"
-      ]
-    },
-    {
-      "category": "Entertainment: Video Games",
-      "type": "multiple",
-      "difficulty": "easy",
-      "question": "What video game sparked controversy because of its hidden &quot;Hot Coffee&quot; minigame?",
-      "correct_answer": "Grand Theft Auto: San Andreas",
-      "incorrect_answers": [
-        "Grand Theft Auto: Vice City",
-        "Hitman: Blood Money",
-        "Cooking Mama"
-      ]
-    },
-    {
-      "category": "Science & Nature",
-      "type": "multiple",
-      "difficulty": "hard",
-      "question": "What is the molecular formula of Ozone?",
-      "correct_answer": "O3",
-      "incorrect_answers": [
-        "C6H2O6",
-        "N2O",
-        "SO4"
-      ]
-    },
-    {
-      "category": "Science: Gadgets",
-      "type": "multiple",
-      "difficulty": "easy",
-      "question": "When was the Tamagotchi digital pet released?",
-      "correct_answer": "1996",
-      "incorrect_answers": [
-        "1989",
-        "1992",
-        "1990"
-      ]
-    },
-    {
-      "category": "Entertainment: Television",
-      "type": "multiple",
-      "difficulty": "hard",
-      "question": "In the TV Show &quot;Donkey Kong Country&quot;, which episode did the song &quot;Eddie, Let Me Go Back To My Home&quot; play in?",
-      "correct_answer": "It&#039;s a Wonderful Life",
-      "incorrect_answers": [
-        "Message In A Bottle Show",
-        "To The Moon Baboon",
-        "Ape-Nesia"
-      ]
-    },
-    {
-      "category": "Entertainment: Video Games",
-      "type": "multiple",
-      "difficulty": "hard",
-      "question": "What was the first &quot;Call Of Duty: Zombies&quot; map to be directed by Jason Blundell?",
-      "correct_answer": "Mob Of The Dead",
-      "incorrect_answers": [
-        "Buried",
-        "Origins",
-        "Moon"
-      ]
-    }
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Who&#039;s the creator of Geometry Dash?",
+  "correct_answer": "Robert Topala",
+  "incorrect_answers": [
+  "Scott Cawthon",
+  "Adam Engels",
+  "Andrew Spinks"
   ]
-}
+  },
+  {
+  "category": "Sports",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Which German sportswear company&#039;s logo is the &#039;Formstripe&#039;?",
+  "correct_answer": "Puma",
+  "incorrect_answers": [
+  "Nike",
+  "Adidas",
+  "Reebok"
+  ]
+  },
+  {
+  "category": "Sports",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "In golf, what name is given to a hole score of two under par?",
+  "correct_answer": "Eagle",
+  "incorrect_answers": [
+  "Birdie",
+  "Bogey",
+  "Albatross"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "What is Solid Snake&#039;s real name?",
+  "correct_answer": "David",
+  "incorrect_answers": [
+  "Solid Snake",
+  "John",
+  "Huey"
+  ]
+  },
+  {
+  "category": "Science & Nature",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "What does the letter &#039;S&#039; stand for in &#039;NASA&#039;?",
+  "correct_answer": "Space",
+  "incorrect_answers": [
+  "Science",
+  "Society",
+  "Star"
+  ]
+  },
+  {
+  "category": "Geography",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Montreal is in which Canadian province?",
+  "correct_answer": "Quebec",
+  "incorrect_answers": [
+  "Ontario",
+  "Nova Scotia",
+  "Alberta"
+  ]
+  },
+  {
+  "category": "Science & Nature",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "Which type of rock is created by intense heat AND pressure?",
+  "correct_answer": "Metamorphic",
+  "incorrect_answers": [
+  "Sedimentary",
+  "Igneous",
+  "Diamond"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "Who is Sonic&#039;s sidekick?",
+  "correct_answer": "Tails",
+  "incorrect_answers": [
+  "Shadow",
+  "Amy",
+  "Knuckles"
+  ]
+  },
+  {
+  "category": "Entertainment: Music",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Who is the Pink Floyd song &quot;Shine On You Crazy Diamond&quot; written about?",
+  "correct_answer": "Syd Barrett",
+  "incorrect_answers": [
+  "John Lennon",
+  "David Gilmour",
+  "Floyd"
+  ]
+  },
+  {
+  "category": "Geography",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "What is the capital of Jamaica?",
+  "correct_answer": "Kingston",
+  "incorrect_answers": [
+  "San Juan",
+  "Port-au-Prince",
+  "Bridgetown"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "Who made Garry&#039;s Mod?",
+  "correct_answer": "Garry Newman",
+  "incorrect_answers": [
+  "Randy Newman",
+  "Facepunch Studios",
+  "Gabe Newell"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "Which of these levels does NOT appear in the console/PC versions of the game &quot;Sonic Generations&quot;?",
+  "correct_answer": "Mushroom Hill",
+  "incorrect_answers": [
+  "City Escape",
+  "Planet Wisp",
+  "Sky Sanctuary"
+  ]
+  },
+  {
+  "category": "General Knowledge",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "What is &quot;dabbing&quot;?",
+  "correct_answer": "A dance",
+  "incorrect_answers": [
+  "A medical procedure",
+  "A sport",
+  "A language"
+  ]
+  },
+  {
+  "category": "History",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Which infamous European traitor was known as &quot;the last person to enter Parliament with honest intentions&quot;?",
+  "correct_answer": "Guy Fawkes",
+  "incorrect_answers": [
+  "Robert Catesby",
+  "Francis Tresham",
+  "Everard Digby"
+  ]
+  },
+  {
+  "category": "Sports",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "The Rio 2016 Summer Olympics held it&#039;s closing ceremony on what date?",
+  "correct_answer": "August 21",
+  "incorrect_answers": [
+  "August 23",
+  "August 19",
+  "August 17"
+  ]
+  },
+  {
+  "category": "Entertainment: Music",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "Which of these artists did NOT remix the song &quot;Faded&quot; by Alan Walker?",
+  "correct_answer": "Skrillex",
+  "incorrect_answers": [
+  "Ti&euml;sto",
+  "Slushii",
+  "Dash Berlin"
+  ]
+  },
+  {
+  "category": "Animals",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "What scientific suborder does the family Hyaenidae belong to?",
+  "correct_answer": "Feliformia",
+  "incorrect_answers": [
+  "Haplorhini",
+  "Caniformia",
+  "Ciconiiformes"
+  ]
+  },
+  {
+  "category": "Geography",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Which German city is located on the River Isar?",
+  "correct_answer": "Munich",
+  "incorrect_answers": [
+  "Berlin",
+  "Hamburg",
+  "Dortmund"
+  ]
+  },
+  {
+  "category": "Entertainment: Music",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "What is the stage name of English female rapper Mathangi Arulpragasam, who is known for the song &quot;Paper Planes&quot;?",
+  "correct_answer": "M.I.A.",
+  "incorrect_answers": [
+  "K.I.A.",
+  "C.I.A.",
+  "A.I.A."
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "What&#039;s the Team Fortress 2 Scout&#039;s city of origin?",
+  "correct_answer": "Boston",
+  "incorrect_answers": [
+  "Sydney",
+  "Detroit",
+  "New York"
+  ]
+  },
+  {
+  "category": "Celebrities",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "What was the cause of death for Freddie Mercury?",
+  "correct_answer": "Pneumonia",
+  "incorrect_answers": [
+  "Stomach Cancer",
+  "HIV",
+  "Brain Hemorrhage"
+  ]
+  },
+  {
+  "category": "Entertainment: Film",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "The 1939 movie &quot;The Wizard of Oz&quot; contained a horse that changed color, what material did they use to achieve this effect?",
+  "correct_answer": "Gelatin",
+  "incorrect_answers": [
+  "Dye",
+  "Paint",
+  "CGI Effect"
+  ]
+  },
+  {
+  "category": "Mythology",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Which of these Roman gods doesn&#039;t have a counterpart in Greek mythology?",
+  "correct_answer": "Janus",
+  "incorrect_answers": [
+  "Vulcan",
+  "Juno",
+  "Mars"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "In vanilla Minecraft, which of the following cannot be made into a block?",
+  "correct_answer": "Charcoal",
+  "incorrect_answers": [
+  "Coal",
+  "Wheat",
+  "String"
+  ]
+  },
+  {
+  "category": "Geography",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "What is the nickname for the US state Delaware?",
+  "correct_answer": "The First State",
+  "incorrect_answers": [
+  "The Fiftieth State",
+  "The Second State",
+  "The Sixteenth State"
+  ]
+  },
+  {
+  "category": "Entertainment: Television",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Which of these television shows makes everyone look under their chair?",
+  "correct_answer": "Oprah",
+  "incorrect_answers": [
+  "Jimmy Fallon",
+  "Saturday Night Live",
+  "Larry Rubert"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "In the game Danganronpa: Happy Trigger Havoc, the character Aoi Asahina&#039;s ultimate ability is what?",
+  "correct_answer": "Ultimate Swimmer",
+  "incorrect_answers": [
+  "Ultimate Detective",
+  "Ultimate Gambler",
+  "Ultimate Dancer"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "Which of these characters was considered, but ultimately not included, for Super Smash Bros. Melee?",
+  "correct_answer": "James Bond",
+  "incorrect_answers": [
+  "Diddy Kong",
+  "Mega Man",
+  "Wave Racer"
+  ]
+  },
+  {
+  "category": "Geography",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "What is the name of the formerly rich fishing grounds off the island of Newfoundland, Canada?",
+  "correct_answer": "Grand Banks",
+  "incorrect_answers": [
+  "Great Barrier Reef",
+  "Mariana Trench",
+  "Hudson Bay"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "Which day in &quot;Papers, Please&quot; does the man in red appear?",
+  "correct_answer": "Day 23",
+  "incorrect_answers": [
+  "Day 20",
+  "Day 17",
+  "Day 15"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Which country was Eliza &quot;Ash&quot; Cohen from &quot;Tom Clancy&#039;s Rainbow Six Siege&quot; born in?",
+  "correct_answer": "Israel",
+  "incorrect_answers": [
+  "United States of America",
+  "Mexico",
+  "Canada"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "Which Kirby game first introduced Copy Abilities?",
+  "correct_answer": "Kirby&#039;s Adventure",
+  "incorrect_answers": [
+  "Kirby Super Star",
+  "Kirby&#039;s Dream Land 2",
+  "Kirby&#039;s Dream Land"
+  ]
+  },
+  {
+  "category": "Animals",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "What is the name of the copper-rich protein that creates the blue blood in the Antarctic octopus?",
+  "correct_answer": "Hemocyanin",
+  "incorrect_answers": [
+  "Cytochrome",
+  "Iron",
+  "Methionine"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "Which of the following games in the The Legend of Zelda franchise was released in Japan before North America?",
+  "correct_answer": "The Legend of Zelda: The Minish Cap",
+  "incorrect_answers": [
+  "The Legend of Zelda: Twilight Princess",
+  "The Legend of Zelda: Spirit Tracks",
+  "The Legend of Zelda: Four Swords"
+  ]
+  },
+  {
+  "category": "Science: Computers",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "What was the first Android version specifically optimized for tablets?",
+  "correct_answer": "Honeycomb",
+  "incorrect_answers": [
+  "Eclair",
+  "Froyo",
+  "Marshmellow"
+  ]
+  },
+  {
+  "category": "Vehicles",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Which car manufacturer created the &quot;Aventador&quot;?",
+  "correct_answer": "Lamborghini",
+  "incorrect_answers": [
+  "Ferrari",
+  "Pagani",
+  "Bugatti"
+  ]
+  },
+  {
+  "category": "History",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "How long did the Warsaw Uprising during World War II last?",
+  "correct_answer": "63 Days",
+  "incorrect_answers": [
+  "20 Days",
+  "55 Days",
+  "224 Days"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "What is the name of the creature that the main character befriends in &quot;The Last Guardian&quot;?",
+  "correct_answer": "Trico",
+  "incorrect_answers": [
+  "Nico",
+  "Wolf",
+  "Andazi"
+  ]
+  },
+  {
+  "category": "Entertainment: Film",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Leonardo Di Caprio won his first Best Actor Oscar for his performance in which film?",
+  "correct_answer": "The Revenant",
+  "incorrect_answers": [
+  "The Wolf Of Wall Street",
+  "Shutter Island",
+  "Inception"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Which of these is not a character in the game, &quot;Lethal League&quot;?",
+  "correct_answer": "Rex",
+  "incorrect_answers": [
+  "Switch",
+  "Candyman",
+  "Sonata"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "In which year was League of Legends released?",
+  "correct_answer": "2009",
+  "incorrect_answers": [
+  "2010",
+  "2003",
+  "2001"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "What is the name of the main island in PLAYERUNKNOWN&#039;S BATTLEGROUNDS?",
+  "correct_answer": "Erangel",
+  "incorrect_answers": [
+  "Marmara",
+  "Severny",
+  "Lastovo"
+  ]
+  },
+  {
+  "category": "Sports",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "What year was hockey legend Wayne Gretzky born?",
+  "correct_answer": "1961",
+  "incorrect_answers": [
+  "1965",
+  "1959",
+  "1963"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "What was the original release date of Grand Theft Auto V?",
+  "correct_answer": "September 17, 2013",
+  "incorrect_answers": [
+  "August 17, 2013",
+  "April 14, 2015",
+  "November 18, 2014"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "What was the name of Sonic the Hedgehog&#039;s original human girlfriend?",
+  "correct_answer": "Madonna",
+  "incorrect_answers": [
+  "Celeste",
+  "Sierra",
+  "Nina"
+  ]
+  },
+  {
+  "category": "Entertainment: Film",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "Which former Star Trek actor directed Three Men and a Baby (1987)?",
+  "correct_answer": "Leonard Nimoy",
+  "incorrect_answers": [
+  "William Shatner",
+  "George Takei",
+  "James Doohan"
+  ]
+  },
+  {
+  "category": "Entertainment: Video Games",
+  "type": "multiple",
+  "difficulty": "medium",
+  "question": "In Left 4 Dead, which campaign has the protagonists going through a subway in order to reach a hospital for evacuation?",
+  "correct_answer": "No Mercy",
+  "incorrect_answers": [
+  "Subway Sprint",
+  "Hospital Havoc",
+  "Blood Harvest"
+  ]
+  },
+  {
+  "category": "Entertainment: Books",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "In the Magic: The Gathering universe,  the Antiquities, Ice Age, and Alliances expansions take place on which continent?",
+  "correct_answer": "Terisiare",
+  "incorrect_answers": [
+  "Aerona",
+  "Shiv",
+  "Jamuraa"
+  ]
+  },
+  {
+  "category": "Entertainment: Comics",
+  "type": "multiple",
+  "difficulty": "hard",
+  "question": "When Batman trolls the online chat rooms, what alias does he use?",
+  "correct_answer": "JonDoe297",
+  "incorrect_answers": [
+  "iAmBatman",
+  "BWayne13",
+  "BW1129"
+  ]
+  },
+  {
+  "category": "Geography",
+  "type": "multiple",
+  "difficulty": "easy",
+  "question": "What is the capital of South Korea?",
+  "correct_answer": "Seoul",
+  "incorrect_answers": [
+  "Pyongyang",
+  "Taegu",
+  "Kitakyushu"
+  ]
+  }
+  ]
+  }

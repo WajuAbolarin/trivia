@@ -1,56 +1,101 @@
 <template>
     <main>
         <div class="question-wrapper">
-            <h3 class="question primary-text text-shadow"> {{question.question}} </h3>
-        
-        <ul class="options" :class="{'already-answered': alreadyAnswered}">
+            <h3
+              class="question primary-text text-shadow"
+              v-html="question.question">
+
+            </h3>
+
+            <app-countdown
+            :time-left="timeLeft"
+            />
+
+          <ul class="options" :class="{'already-answered': alreadyAnswered}">
             <li 
               class="option black "
               v-for="(option, i) in options "
               :key="i"
-              @click="questionAnswered(option)">
-                {{option}}
-                  <span class="tick"></span>
+              :ref="`option-${i}`"
+              @click="questionAnswered(option, i)"
+              v-html="option"
+              >
             </li>
             
-        </ul>
+          </ul>
         </div>
             
     </main>    
-</template>already-answered
+</template>
 
 <script>
+import AppCountdown  from '@/components/AppCountdown'
+
 export default {
+  components:{AppCountdown},
   props: { 
     question: {
         required: true, 
         type: Object
-        }
+        },
   },
   data () {
     return {
-      alreadyAnswered: false
+      alreadyAnswered: false,
+      chosenOptionIndex: null,
+      timeLeft: 15
     }
   },
   computed:{
     options() {
         return [...this.question.incorrect_answers, this.question.correct_answer].sort()
     },
-
+    timer(){
+      return this.timeLeft
+    }
   },
   methods:{
-    questionAnswered(option){
-      this.alreadyAnswered = true
-      this.$store.dispatch('evaluateAnswer', option)
+    async questionAnswered(option, i){
+      this.alreadyAnswered = true 
+      const {mutation, classToAdd} = await this.$store.dispatch('evaluateAnswer', option)
+      await this.addClass(i, classToAdd)
+      await this.resetClasses(classToAdd,i)
+      this.$store.dispatch('toNextQuestion', mutation)
+            
+    },
+    unescape(val){
+      return unescape(val)
+    },
+    addClass(i, classToAdd){
+      return new Promise((resolve, reject)=>{
+          setTimeout(() => {
+            this.$refs[`option-${i}`][0].classList.add(classToAdd)
+           resolve()
+          
+          }, 1000)
+      })
+    },
+    resetClasses(classToRemove, i){
+      return new Promise((resolve, reject)=>{
+      setTimeout(() => {
+        this.$refs[`option-${i}`][0].classList.remove(classToRemove)
+        resolve('done')
+        
+        }, 1000)
+      })
     }
   },
   watch: {
-    question(){
+   async question(){
       this.alreadyAnswered = false
+      this.chosenOptionIndex = null
+      this.timeLeft = 15
+      await this.resetClasses()
+      this.nextTick()
     }
   }
-  
-};
+   
+}
 </script>
 
 <style>

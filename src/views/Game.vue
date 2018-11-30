@@ -4,10 +4,13 @@
             :score="score"
             :percentage="questionPercentage"
             :user="user"
+            :set="currentSet"
             >
         </app-header>
-        <div class="wrap">
-            <app-question :question="currentQuestion"></app-question>
+        <div class="wrap" v-show="!fetchingQuestions"> 
+            <app-question 
+            :question="currentQuestion"
+            ></app-question>
         </div>
     </div>
 </template>
@@ -24,6 +27,11 @@ export default {
         AppLeaderboard,
         AppQuestion
     },
+    data(){
+        return {
+            fetchingQuestions: true
+        } 
+    },
     computed: {
         currentQuestion () {
             return this.$store.getters.currentQuestion
@@ -36,11 +44,17 @@ export default {
         },
         user(){
             return this.$store.state.user
+        },
+        currentSet(){
+            return this.$store.getters.currentSet
         }
+
     },
-   created(){
-    this.$store.dispatch('fetchQuestions')
+   async created(){
+    await this.$store.dispatch('fetchQuestions')
+    this.fetchingQuestions = false 
   }
+  
 }
 </script>
 

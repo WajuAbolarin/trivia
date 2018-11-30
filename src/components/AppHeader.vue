@@ -4,7 +4,8 @@
         <div class="right details black text-shadow">
             <div class="top">
             <span class="score alt-text">{{score}}</span>
-            <span class="difficulty">Easy</span>
+              &nbsp;
+            <span class="difficulty">{{set}}/5</span>
             </div>
             <div class="progress-border">
                 <div class="progress" :style="`width: ${percentage}%;`"></div>
@@ -17,7 +18,8 @@
 
 <script>
 export default {
-  props:['score', 'percentage', 'user'],
+  props:['score', 'percentage', 'user', 'set'],
+
 
 }
 </script>
