@@ -14,8 +14,8 @@
           <ul class="options" :class="{'already-answered': alreadyAnswered}">
             <li 
               class="option black "
-              v-for="(option, i) in options "
-              :key="i"
+              v-for="(option, i) in options"
+              :key="option"
               :ref="`option-${i}`"
               @click="questionAnswered(option, i)"
               v-html="option"
