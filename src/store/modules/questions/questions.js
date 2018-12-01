@@ -84,7 +84,7 @@ export default {
         return
       }
       commit('INCREASE_QUESTION_INDEX')
-      commit(mutation)
+      if(null != mutation ){ commit(mutation) }
 
     },
 

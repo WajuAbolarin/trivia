@@ -4,7 +4,32 @@
 
 <script>
 export default {
-    props:['time-left']
+    props:['initialTime'],
+    data(){
+        return {
+            currentTime: this.initialTime,
+            timer: null 
+        }
+    },
+    computed:{
+        timeLeft(){
+            return this.currentTime > 0 ?  this.currentTime : 0
+        }
+    },
+    mounted(){
+        this.timer = setInterval( ()=> {
+            this.currentTime--
+        }, 1000)
+        
+    },
+    watch:{
+        currentTime(val){
+            if(val <= 0){
+                clearInterval(this.timer)
+                this.$store.dispatch('toNextQuestion')
+            }
+        }
+    }
 
 }
 </script>

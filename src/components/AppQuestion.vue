@@ -8,7 +8,8 @@
             </h3>
 
             <app-countdown
-            :time-left="timeLeft"
+            :key="question.question" 
+            :initial-time="timeLeft"
             />
 
           <ul class="options" :class="{'already-answered': alreadyAnswered}">
@@ -62,9 +63,6 @@ export default {
       await this.resetClasses(classToAdd,i)
       this.$store.dispatch('toNextQuestion', mutation)
             
-    },
-    unescape(val){
-      return unescape(val)
     },
     addClass(i, classToAdd){
       return new Promise((resolve, reject)=>{
