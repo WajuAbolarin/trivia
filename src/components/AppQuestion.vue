@@ -7,10 +7,10 @@
 
             </h3>
 
-            <app-countdown
+            <!-- <app-countdown
             :key="question.question" 
             :initial-time="timeLeft"
-            />
+            /> -->
 
           <ul class="options" :class="{'already-answered': alreadyAnswered}">
             <li 
@@ -31,6 +31,8 @@
 
 <script>
 import AppCountdown  from '@/components/AppCountdown'
+import {ACTIONS } from './../store/modules/questions/types'
+
 
 export default {
   components:{AppCountdown},
@@ -58,17 +60,21 @@ export default {
   methods:{
     async questionAnswered(option, i){
       this.alreadyAnswered = true 
-      const {mutation, classToAdd} = await this.$store.dispatch('evaluateAnswer', option)
+      const {mutation, classToAdd} = await this.$store.dispatch(ACTIONS.EVALUATE_ANSWER, option)
       await this.addClass(i, classToAdd)
       await this.resetClasses(classToAdd,i)
-      this.$store.dispatch('toNextQuestion', mutation)
+      this.$store.dispatch(ACTIONS.TO_NEXT_QUESTION, mutation)
             
     },
     addClass(i, classToAdd){
       return new Promise((resolve, reject)=>{
           setTimeout(() => {
-            this.$refs[`option-${i}`][0].classList.add(classToAdd)
-           resolve()
+            const option = this.$refs[`option-${i}`]
+            
+            if(option){
+                option[0].classList.add(classToAdd)
+                resolve()
+            }
           
           }, 1000)
       })
@@ -76,8 +82,11 @@ export default {
     resetClasses(classToRemove, i){
       return new Promise((resolve, reject)=>{
       setTimeout(() => {
-        this.$refs[`option-${i}`][0].classList.remove(classToRemove)
-        resolve('done')
+        const option = this.$refs[`option-${i}`]
+        if(option){
+          this.$refs[`option-${i}`][0].classList.remove(classToRemove)
+          resolve('done')
+        } 
         
         }, 1000)
       })
@@ -91,8 +100,7 @@ export default {
       await this.resetClasses()
       this.nextTick()
     }
-  }
-   
+  },   
 }
 </script>
 

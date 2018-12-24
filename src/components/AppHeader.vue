@@ -11,14 +11,14 @@
                 <div class="progress" :style="`width: ${percentage}%;`"></div>
             </div>
             <div class="bottom">
-            <span class="name">{{user}}</span></div>
+            <span class="name">{{player}}</span></div>
         </div>
     </header>
 </template>
 
 <script>
 export default {
-  props:['score', 'percentage', 'user', 'set'],
+  props:['score', 'percentage', 'player', 'set'],
 
 
 }

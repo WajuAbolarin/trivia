@@ -3,6 +3,9 @@
 </template>
 
 <script>
+import {ACTIONS } from './../store/modules/questions/types'
+
+
 export default {
     props:['initialTime'],
     data(){
@@ -26,7 +29,7 @@ export default {
         currentTime(val){
             if(val <= 0){
                 clearInterval(this.timer)
-                this.$store.dispatch('toNextQuestion')
+                this.$store.dispatch(ACTIONS.TO_NEXT_QUESTION)
             }
         }
     }

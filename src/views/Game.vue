@@ -3,12 +3,14 @@
         <app-header 
             :score="score"
             :percentage="questionPercentage"
-            :user="user"
+            :player="player"
             :set="currentSet"
             >
         </app-header>
         <div class="wrap" v-show="!fetchingQuestions"> 
             <app-question 
+            :key="currentQuestion.question"
+            v-if="currentQuestion"
             :question="currentQuestion"
             ></app-question>
         </div>
@@ -19,7 +21,7 @@
 import AppHeader from '@/components/AppHeader'
 import AppLeaderboard from '@/components/AppLeaderboard'
 import AppQuestion from '@/components/AppQuestion'
-
+import {ACTIONS } from './../store/modules/questions/types'
 
 export default {
     components:{
@@ -42,8 +44,8 @@ export default {
         questionPercentage(){
             return this.$store.getters.questionPercentage
         },
-        user(){
-            return this.$store.state.user
+        player(){
+            return this.$store.state.player.player.profile.username
         },
         currentSet(){
             return this.$store.getters.currentSet
@@ -51,7 +53,7 @@ export default {
 
     },
    async created(){
-    await this.$store.dispatch('fetchQuestions')
+    await this.$store.dispatch(ACTIONS.FETCH_QUESTIONS)
     this.fetchingQuestions = false 
   }
   
