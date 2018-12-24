@@ -11,6 +11,22 @@ body{
   overflow-x: hidden;
   background: linear-gradient(105deg, #ABFFCD 0, #6400E6 100%) no-repeat; 
 }
+.input-field{
+  outline: none;
+  border:none;
+  background: transparent;
+  border-bottom: .8px solid rgba(255,255,255,0.4);
+  font-size: 1.2em;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.12em;
+}
+a{
+  color: rgba(0,0,0,0.65);
+  text-decoration: none;
+}
+@import './_spacing.css';
+
 .primary-text{
   color: rgba(255,255,255,0.9); 
 }
@@ -32,18 +48,3 @@ body{
 .text-shadow {
   text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
 }
-.input-field{
-  outline: none;
-  border:none;
-  background: transparent;
-  border-bottom: .8px solid rgba(255,255,255,0.4);
-  font-size: 1.2em;
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: 0.12em;
-}
-a{
-  color: rgba(0,0,0,0.65);
-  text-decoration: none;
-}
-@import './_spacing.css'

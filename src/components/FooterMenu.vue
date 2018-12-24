@@ -24,7 +24,6 @@ export default {
 </script>
 
 <style>
- 
  .footer-menu{
    list-style: none;
    display: flex;
