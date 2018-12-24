@@ -1,0 +1,20 @@
+1. Make Firebase Auth work, so one can log in with username and password
+2. Save a players progress to firestore
+3. UI/UX Tweaks
+ * Game Audio
+ * Footer Menu
+ * Make things stop jumping around
+ * Logo/Favicons
+4. Fetch questions from API, {1,2: Easy, 3,4: Medium, 5:hard}
+5. Local Higest score.. saved in localstorage, synched with firestore
+6. Leaderboard
+
+ 
+RoadMap
+
+1. Federated login (google, Facebook, twitter)
+2. User profiles particularly ranking
+3. Gameplay Stats
+4. Sharing Profiles
+	
+
