@@ -54,29 +54,4 @@ export default {
 </script>
 
 <style >
-p.begin {
-  font-size: 2rem;
-  cursor: pointer;
-}
-.forward-arrow{
-  font-size: 1.5rem;
-  vertical-align: middle;
-  cursor: pointer;
-  padding: 5px;
-}
-.home-wrapper{
-  flex-direction: column;
-}
-.home-wrapper *{
-  margin-bottom: 1.5em;
-}
-.input-field{
-  outline: none;
-  border:none;
-  background: transparent;
-  border-bottom: .8px solid white;
-  font-size: 1.4em;
-  font-style: italic;
-  letter-spacing: 0.12em;
-}
 </style>
