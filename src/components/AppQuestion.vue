@@ -7,10 +7,10 @@
 
             </h3>
 
-            <!-- <app-countdown
+            <app-countdown
             :key="question.question" 
             :initial-time="timeLeft"
-            /> -->
+            />
 
           <ul class="options" :class="{'already-answered': alreadyAnswered}">
             <li 

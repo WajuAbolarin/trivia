@@ -11,7 +11,7 @@ import FooterMenu from '@/components/FooterMenu.vue'
 export default {
   components: {
     FooterMenu
-  }
+  },
 }
 </script>
 <style>
