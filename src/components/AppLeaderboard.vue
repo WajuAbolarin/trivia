@@ -1,14 +1,9 @@
 <template>
-<div class="wrapper">
+<div class="wrapper" v-if="scores.length">
   <aside class="leaderboard shadow" id="leaderboard">
     <p class="primary-text text-shadow title" >Leaderboard</p>
       <ul class="scores-list text-shadow" id="scores-list">
-        <li class="shadow"><span class="name ">Ofure</span><span class="score">750</span></li>
-        <li class="shadow"><span class="name">Olanrewaju</span><span class="score">650</span></li>
-        <li class="shadow"><span class="name">New User</span><span class="score">550</span></li>
-        <li class="shadow"><span class="name">Guest</span><span class="score">450</span></li>
-        <li class="shadow"><span class="name">Guest</span><span class="score">350</span></li>
-        <li class="shadow"><span class="name">My Name</span><span class="score">250</span></li>
+        <li class="shadow" v-for="score in scores" :key="score.username" ><span class="name ">{{score.username}}</span><span class="score">{{score.score}}</span></li>
       </ul>  
   </aside>
 </div>
@@ -16,7 +11,7 @@
 
 <script>
 export default {
-
+  props : ['scores'],
 }
 </script>
 
