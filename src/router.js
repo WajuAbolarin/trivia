@@ -1,8 +1,6 @@
-import Vue from "vue";
-import Router from "vue-router";
-import SignIn from "./views/SignIn.vue";
-import SignUp from "./views/SignUp.vue";
-import LeaderBoard from "./views/LeaderBoard.vue";
+import Vue from "vue"
+import Router from "vue-router"
+import SignIn from "./views/SignIn.vue"
 import store from './store/store'
 
 
@@ -14,15 +12,10 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "sign-in",
+      name: "home",
+      alias: '/sign-in',
       component: SignIn
     },
-    {
-      path: "/signup",
-      name: "sign-up",
-      component: SignUp
-    },
-
     {
       path: "/about",
       name: "about",

@@ -1,20 +1,21 @@
 <template>
     <main>
-        <div class="question-wrapper">
-            <h3
+        <div class="question-wrapper pt-1">
+          <div class="question-countdown">
+            <p
               class="question primary-text text-shadow"
               v-html="question.question">
 
-            </h3>
+            </p>
 
             <app-countdown
-            :key="question.question" 
-            :initial-time="timeLeft"
+              :key="question.question" 
+              :initial-time="timeLeft"
             />
-
-          <ul class="options" :class="{'already-answered': alreadyAnswered}">
+          </div>
+          <ul class="options mt-3" :class="{'already-answered': alreadyAnswered}">
             <li 
-              class="option black "
+              class="option black"
               v-for="(option, i) in options"
               :key="option"
               :ref="`option-${i}`"
@@ -67,16 +68,23 @@ export default {
             
     },
     addClass(i, classToAdd){
+
       return new Promise((resolve, reject)=>{
-          setTimeout(() => {
-            const option = this.$refs[`option-${i}`]
+        setTimeout(() => {
+          const index = this.options.indexOf(this.question.correct_answer)
+          const rightOption = this.$refs[`option-${index}`]
+          if(rightOption){
+            rightOption[0].classList.add('is-correct')
+          }
+
+          const option = this.$refs[`option-${i}`]
             
-            if(option){
+          if(option){
                 option[0].classList.add(classToAdd)
                 resolve()
             }
           
-          }, 1000)
+          }, 1500)
       })
     },
     resetClasses(classToRemove, i){
@@ -106,55 +114,56 @@ export default {
 
 <style>
 .question-wrapper {
-  padding: 5px;
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-height: 60vh;
+  overflow: scroll;
+}
+.question-countdown{
+  min-height: 70%;
+  height: 70%;
 }
 .question {
   text-align: center;
-  font-size: 30px;
-  margin-bottom: 30px;
-  /* outline: 1px solid yellow; */
+  font-size: 1.5rem;
 }
 .options {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10%;
+  padding: 0.5em;
   align-items: center;
-  /* box-shadow: 1px 20px 15px rgba(0,0,0,0.2); */
-  font-size: 20px;
+  font-size: 0.6rem;
   font-weight: bold;
 }
 .option {
-  padding: 15px 25px;
-  margin: 10px 5px;
-  /* outline: 1px solid lime; */
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1);
+  padding: 0.8em 1.3em;
+  margin: 1em 2.5%;
+  width: 45%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .option:hover,
 .option.is-correct,
 .option.is-wrong {
-  border: 2px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
   background: rgb(255, 216, 61);
   transform: scale(1.1);
 }
 .option.is-correct {
-  background: rgba(20, 255, 20, 0.4);
+  background: rgba(20, 255, 20, 0.3);
+  transform: scale(1.1);
 }
 .option.is-wrong {
-  background: rgba(255, 70, 50, 0.6);
+  background: rgba(255, 70, 50, 0.3);
 }
-.countdown {
-  font-size: 55px;
-  font-style: italic;
-}
+
 ul.already-answered li {
   pointer-events: none;
 }

@@ -64,17 +64,16 @@ export default {
 
             return Promise.resolve(false)
           }
-          
-
         })
         .catch(err => {      
-          return Promise.resolve(err)
+        return Promise.resolve(err)
         })
         
   },
 
   async  [ACTIONS.ANONYMOUS_SIGNIN] ({dispatch}, username) 
   {
+    
    auth
       .signInAnonymously()
       .catch(err => {

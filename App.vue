@@ -1,6 +1,8 @@
 <template>
   <div id="app" class="app-wrapper">
-    <router-view class="view" />
+    <keep-alive>
+      <router-view> </router-view>
+    </keep-alive>
     <footer-menu></footer-menu>
   </div>
 </template>
@@ -16,12 +18,5 @@ export default {
 </script>
 <style>
  @import url('./assets/framework.css');
- .app-wrapper{
-   display: flex;
-   flex-direction: column;
-   min-height: 100vh;
- }
- .view{
-   flex: 1;
- }
+
 </style>

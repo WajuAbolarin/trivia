@@ -1,5 +1,5 @@
 <template>
-    <span class="primary-text text-shadow">{{timeLeft}}s</span>    
+    <span class="alt-text text-bold mt-1 countdown">{{timeLeft}}</span>    
 </template>
 
 <script>
@@ -38,5 +38,17 @@ export default {
 </script>
 
 <style>
+.countdown {
+margin-left: auto;
+background: rgba(0, 0, 0, 0.5);
+height: 45px;
+width: 45px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+font-size: 1.2rem;
+font-style: italic;
 
+}
 </style>

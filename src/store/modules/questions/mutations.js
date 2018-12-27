@@ -21,9 +21,7 @@ export default {
       state.currentSet = 1
     },
 
-    [MUTATIONS.SYNC_STATE] (state, { currentQuestionSet, currentQuestionIndex}){
-      console.log({currentQuestionSet, currentQuestionIndex})
-      
+    [MUTATIONS.SYNC_STATE] (state, { currentQuestionSet, currentQuestionIndex}){      
       state.currentSet = currentQuestionSet
       state.currentQuestionIndex = currentQuestionIndex
     }

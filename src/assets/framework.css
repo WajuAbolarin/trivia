@@ -6,10 +6,16 @@
 :root {
   font-size: 16px;
 }
-body{
-  min-height: 100vh;
+html{
+  height: 100vh;
+  height: 100%;
+  width: 100vw;
   overflow-x: hidden;
   background: linear-gradient(105deg, #ABFFCD 0, #6400E6 100%) no-repeat; 
+}
+body{
+  height: 100%;
+  width: 100%;
 }
 .input-field{
   outline: none;
@@ -27,6 +33,16 @@ a{
 }
 @import './_spacing.css';
 
+ 
+.app-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100%;
+}
+.view{
+  flex: 1;
+}
 .primary-text{
   color: rgba(255,255,255,0.9); 
 }
@@ -47,4 +63,7 @@ a{
 }
 .text-shadow {
   text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}
+small {
+  font-size: 0.7rem;
 }

@@ -1,5 +1,5 @@
 <template>
-    <div v-cloak>
+    <div v-cloak class="view">
         <app-header 
             :score="score"
             :percentage="questionPercentage"
@@ -7,7 +7,7 @@
             :set="currentSet"
             >
         </app-header>
-        <div class="wrap" v-show="!fetchingQuestions"> 
+        <div class="wrap mt-2" v-show="!fetchingQuestions"> 
             <app-question 
             :key="currentQuestion.question"
             v-if="currentQuestion"
@@ -62,30 +62,12 @@ export default {
 
 <style>
 [v-cloak]{
-    display: none;
+display: none;
 }
 .wrap {
-    display: flex;
-    justify-content: space-between;
-}
-/* aside.leaderboard{
-
-}
-.question{
-    display: relative;
-} */
-.countdown{
-    display: none;
-    position: absolute;
-    bottom: 0;
-}
-main{
-    margin-right: auto;
-}
-@media (max-width: 700px) {
-    aside.leaderboard {
-        display: none;
-    }
+display: flex;
+justify-content: space-between;
+width: 100vw;
 }
 
 </style>

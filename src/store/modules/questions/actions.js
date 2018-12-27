@@ -8,7 +8,7 @@ export default {
     },
 
     [ACTIONS.FETCH_QUESTIONS] ( {dispatch},){
-      return axios.get('/data/questions.json')
+      return axios.get(process.env.VUE_APP_QUESTIONS_URL)
             .then(({data}) => {
               dispatch(ACTIONS.SET_QUESTIONS, data.results)
               return Promise.resolve('done fetching questions')
@@ -22,6 +22,7 @@ export default {
       }
       await dispatch(ACTIONS.FETCH_QUESTIONS)
       commit(MUTATIONS.RESET_CURRENT_SET)
+      commit(MUTATIONS.RESET_QUESTION_INDEX)
     },
 
     async [ACTIONS.TO_NEXT_QUESTION] ({state, commit, dispatch}, mutation ){

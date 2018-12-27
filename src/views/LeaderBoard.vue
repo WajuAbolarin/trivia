@@ -1,5 +1,7 @@
 <template>
+<div class="view">
   <app-leaderboard :scores=scores v-if="scores.length"></app-leaderboard>
+</div>
 </template>
 
 <script>
@@ -12,13 +14,13 @@ export default {
   },
   data() {
     return {
-      scores : []
+      scores: []
     }
   },
 
   async created(){
     const scores = await db.collection('players')
-      .orderBy('progress.score')
+      .orderBy('progress.score', 'desc')
       .limit(10)
       .get()
       .then(async querySnapshot => {
