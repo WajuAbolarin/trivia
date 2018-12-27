@@ -13,7 +13,11 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      alias: '/sign-in',
+      component: SignIn
+    },
+    {
+      path: "/sign-in",
+      name: "sign-in",
       component: SignIn
     },
     {
